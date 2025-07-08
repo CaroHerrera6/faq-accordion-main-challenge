@@ -53,6 +53,9 @@ p {
 .answer-text {
   max-width: 100%;
 }
+.answer-text-first {
+  display: block;
+}
 .back-img {
   position: absolute;
   top: 0;
