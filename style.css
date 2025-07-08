@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --hsl--White: hsl(0, 100%, 100%);
+  --hsl--Purple: hsl(281, 83%, 54%);
+  --hsl-Purple100: hsl(275, 100%, 97%);
+  --hsl-Purple600: hsl(292, 16%, 49%);
+  --hsl-Purple950: hsl(292, 42%, 14%);
+  --hsl-Bluish: hsl(228, 45%, 44%);
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+body {
+  background-color: var(--hsl-Purple100);
+  font-size: 1rem;
+  margin: 0;
+  font-family: "Work Sans";
+  color: var(--hsl-Purple950);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 140vh;
+  padding: 1rem;
+  position: relative;
+}
+h1 {
+  margin-top: 0rem;
+}
+hr {
+  margin: 1rem 0;
+  border: none;
+  border-bottom: 0.031rem solid var(--hsl-Purple100);
+  /* background-color: ; */
+}
+
+p {
+  display: none;
+  line-height: 1.5;
+}
+
+#star {
+  width: 1.3rem;
+  margin-right: 1rem;
+}
+.answer {
+  font-weight: 400;
+  color: var(--hsl-Purple600);
+}
+.answer-text {
+  max-width: 100%;
+}
+.back-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  height: 15rem;
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+/* .back-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+} */
+.container {
+  background-color: var(--hsl--White);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-width: 22rem;
+  padding: 1.2rem;
+  flex: 1;
+  border-radius: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.qtn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.questions {
+  font-weight: 700;
+  max-width: 70%;
+  align-self: center;
+}
+.questions:hover {
+  color: var(--hsl--Purple);
+  cursor: pointer;
+}
+.show-hide {
+  margin-left: auto;
+}
+.wrapper {
+  width: 100%;
+  max-width: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ATTRIBUITION STYLES */
+.attribution {
+  font-size: 0.688rem;
+  text-align: center;
+}
+.attribution a {
+  color: var(--hsl-Bluish);
+}
+
+@media (min-width: 768px) {
+  body {
+    min-height: 130vh;
+  }
+  .back-img {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    height: 20rem;
+  }
+  .container {
+    min-width: 34rem;
+  }
+}
